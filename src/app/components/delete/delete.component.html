@@ -1,0 +1,22 @@
+<table class="table table hover">
+  <thead>
+  <tr>
+    <th scope="col">#Id</th>
+    <th scope="col">User_Id</th>
+    <th scope="col">Title</th>
+    <th scope="col">Body</th>
+    <th>option
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tempData of list">
+    <td>{{tempData ?.id}}</td>
+    <td>{{tempData ?.userId}}</td>
+    <td>{{tempData ?.title}}</td>
+    <td>{{tempData ?.body}}</td>
+    <td><button mat-raised-button color="warn" (click)=delete(tempData.id)><mat-icon>delete</mat-icon>DeleteME</button></td>
+  </tr>
+
+  </tbody>
+</table>
